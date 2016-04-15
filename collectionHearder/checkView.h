@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  checkView.h
 //  collectionHearder
 //
 //  Created by kans on 16/3/30.
@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MImaLibTool.h"
 
-typedef void (^callBackBlock)(NSString * );
-
-@interface ViewController : UIViewController
-
-
+@interface checkView : UIView
+@property (nonatomic,strong)UIView * backView;
 @end
-

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="oha-Pd-n9l" customClass="ConstomCell">
+            <rect key="frame" x="0.0" y="0.0" width="154" height="268"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="154" height="268"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cp_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="vle-Mc-RYr">
+                        <rect key="frame" x="1" y="-1" width="153" height="267"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vle-Mc-RYr" secondAttribute="bottom" constant="1" id="3IS-G5-DvI"/>
+                <constraint firstItem="vle-Mc-RYr" firstAttribute="top" secondItem="oha-Pd-n9l" secondAttribute="top" constant="1" id="PVj-r6-VC5"/>
+                <constraint firstItem="vle-Mc-RYr" firstAttribute="leading" secondItem="oha-Pd-n9l" secondAttribute="leading" constant="1" id="g7Q-I3-LTE"/>
+                <constraint firstAttribute="trailing" secondItem="vle-Mc-RYr" secondAttribute="trailing" constant="1" id="rEb-dJ-YdP"/>
+            </constraints>
+            <size key="customSize" width="154" height="268"/>
+            <connections>
+                <outlet property="iconImgV" destination="vle-Mc-RYr" id="zly-F4-uu0"/>
+            </connections>
+            <point key="canvasLocation" x="366" y="416"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cp_img.png" width="640" height="637"/>
+    </resources>
+</document>
