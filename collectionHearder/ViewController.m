@@ -227,18 +227,13 @@
     
     //获取数据之后 默认选择第一张图片   但图片没有显示出来  你在看看为啥？？？？
     NSIndexPath *dex = [NSIndexPath indexPathForRow:1 inSection:0];
-    
     [self collectionView:self.chooseCollectionView didSelectItemAtIndexPath:dex];
 
     
     ALAssetsGroup *froup = self.arrGroup[indexPath.row];
     NSString * str = [NSString stringWithFormat:@"%@",[froup valueForProperty:ALAssetsGroupPropertyName]];
-    
-    
     [_titleButton setTitle:str forState:UIControlStateNormal];
-    
     ALAsset *set=[[[MImaLibTool shareMImaLibTool] getAllAssetsWithGroup:self.arrGroup[indexPath.row]]firstObject];
-    NSLog(@"set%@",set);
     headerView.imagV.image=[UIImage imageWithCGImage:set.thumbnail];
     
     [headerView getImaSizeWithAsset:set];
@@ -271,14 +266,12 @@
         UICollectionViewCell *addItemCell = [collectionView dequeueReusableCellWithReuseIdentifier:addItem forIndexPath:indexPath];
         return addItemCell;
     }else{
-        
-        
              ConstomCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-        
-        
         /**
          *  重点在这  在你选择照片的时候把那个点击的cell标记一下 在这复用的时候你做一下判断 显示当前的indexpath时 让他是红色 如果是复用的话让他的背景色为白色
          */
+        
+        
         if (indexPath.row == cellFlag) {
             
             cell.backgroundColor = [UIColor redColor];
